@@ -23,6 +23,28 @@
       text-align: center;
       cursor: crosshair;
       padding: 2rem;
+      position: relative;
+    }
+
+    /* Back button */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #ff69b4;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #ff69b4;
+      z-index: 999;
+      transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #ff1493;
+      box-shadow: 0 0 15px #ff1493;
     }
 
     p {
@@ -92,6 +114,9 @@
   </style>
 </head>
 <body>
+  <!-- Back Button -->
+  <a href="love.html" class="back-btn">← Back</a>
+
   <p>
     "Happy Birthday, Love Love! I just want to thank you for existing in this world, because with your presence, the world becomes a better place for the people around you, especially me. I also want you to know that I’ll always be here for you. Please enjoy your day! I love you. Mwah!"
   </p>
