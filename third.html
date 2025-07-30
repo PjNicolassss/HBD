@@ -30,8 +30,30 @@
       font-size: 1.5rem;
       max-width: 800px;
       line-height: 1.6;
-      text-shadow: 0 0 5px #fff;
       z-index: 2;
+      animation: shine 2s infinite;
+      text-shadow: 0 0 8px #fff, 0 0 15px #ff69b4;
+    }
+
+    @keyframes shine {
+      0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff69b4; }
+      50% { text-shadow: 0 0 15px #fff, 0 0 30px #ff1493; }
+      100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff69b4; }
+    }
+
+    .image-box {
+      display: inline-block;
+      border: 4px dashed #ff69b4;
+      border-radius: 12px;
+      margin-top: 2rem;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    .image-box img {
+      display: block;
+      width: 330px;
+      height: auto;
+      border-radius: 8px;
     }
 
     .confetti {
@@ -74,6 +96,10 @@
     "Happy Birthday, Love Love! I just want to thank you for existing in this world, because with your presence, the world becomes a better place for the people around you, especially me. I also want you to know that I’ll always be here for you. Please enjoy your day! I love you. Mwah!"
   </p>
 
+  <div class="image-box">
+    <img src="pic.jpg" alt="Special moment" />
+  </div>
+
   <script>
     // Confetti
     function createConfettiPiece() {
@@ -87,11 +113,12 @@
       document.body.appendChild(confetti);
       setTimeout(() => confetti.remove(), 8000);
     }
+
     setInterval(() => {
       for (let i = 0; i < 5; i++) createConfettiPiece();
     }, 300);
 
-    // Mouse effects
+    // Mouse Sparkles & Background Hover Effect
     document.addEventListener('mousemove', (e) => {
       const x = e.clientX / window.innerWidth * 100;
       const y = e.clientY / window.innerHeight * 100;
