@@ -28,6 +28,27 @@
       cursor: crosshair;
     }
 
+    /* Back Button */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #ff69b4;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #ff69b4;
+      z-index: 999;
+      transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #ff1493;
+      box-shadow: 0 0 15px #ff1493;
+    }
+
     h1 {
       color: #ff69b4;
       font-size: 2.5rem;
@@ -122,6 +143,9 @@
   </style>
 </head>
 <body>
+  <!-- Back Button -->
+  <a href="love.html" class="back-btn">← Back</a>
+
   <h1>Happy Birthday, Love Love! 🎉</h1>
   <button class="heart-button" onclick="window.location.href='love.html'">❤️</button>
 
@@ -138,13 +162,12 @@
       document.body.appendChild(confetti);
     }
 
-    // Background hover effect
+    // Background hover effect & sparkle
     document.addEventListener('mousemove', (e) => {
       const x = e.clientX / window.innerWidth * 100;
       const y = e.clientY / window.innerHeight * 100;
       document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, #aee6f9, #c3f1fd)`;
 
-      // Sparkle trail
       const sparkle = document.createElement('div');
       sparkle.className = 'sparkle';
       sparkle.style.left = `${e.clientX}px`;
